@@ -1,3 +1,3 @@
-## Curso de React codigo facilito - bootcamp.
+## Bootcamp de React codigo facilito.
 
 ## Alfredo Sánchez.
