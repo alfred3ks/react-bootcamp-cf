@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function AppDos() {
+// Componente sacado de Babel.
+export default function AppSinJSX() {
     return React.createElement(
         "div",
         { className: "App" },

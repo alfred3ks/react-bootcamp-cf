@@ -1,0 +1,13 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+
+}
+.App ul {
+
+    padding: 0;
+}
+.App li {
+    list-style-type: none;
+    padding: 0;
+}

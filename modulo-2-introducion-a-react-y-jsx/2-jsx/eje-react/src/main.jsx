@@ -1,12 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
-import AppDps from './AppDos';
-import "./App.css"
+import App, { Lista } from './App'
+import AppSinJSX from './AppSinJSX';
+import "../src/css/App.css"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <AppDps />
+    <Lista />
+    <AppSinJSX />
   </React.StrictMode>
 )
