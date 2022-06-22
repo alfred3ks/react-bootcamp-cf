@@ -17,7 +17,7 @@ export default function App() {
     );
 }
 
-// Vamos a crear un componentes para renderizar una lista:
+// Vamos a crear otro componentes para renderizar una lista:
 export function Lista() {
     const elementos = [
         {
@@ -44,7 +44,8 @@ export function Lista() {
                 <h3>Lista de supermercado</h3>
                 <ul>
                     {elementos.map((elem, index) => {
-                        return <li key={index}>{elem.texto}</li>
+                        // return <li key={index}>{elem.texto}</li>
+                        return <li key={elem.id}>{elem.texto}</li>
                     })}
                 </ul>
             </div>
