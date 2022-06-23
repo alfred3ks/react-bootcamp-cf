@@ -38,3 +38,13 @@ useState(2);
 console.log(contador);
 useState(3);
 console.log(contador);
+
+/*
+
+En resumen: Props vs State:
+
+Props: Son argumentos que le pasamos a una funcion y se le pasa de un padre al hijo.
+
+State: Es como la memoria de un componente, es donde guarda cierta infroacion y la puede cambiar como respuesta interactiva.
+
+*/
