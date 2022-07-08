@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Button Clicked</title>
+</head>
+
+<!-- Estilos -->
+<style>
+  .div {
+    background-color: rgb(159, 31, 8);
+    padding: 20px;
+  }
+
+  .p {
+    background-color: rgb(10, 10, 75);
+    padding: 5px;
+  }
+</style>
+
+<body>
+  <h2>Boton uno sin stop propagation:</h2>
+  <div class="div" onclick="alert('Div clicked')">
+    <p class="p" onclick="alert('P clicked')">
+      <button onclick="alert('Button clicked')">Click me</button>
+    </p>
+  </div>
+
+  <h2>Boton 2 con stop propagation:</h2>
+  <div class="div" onclick="alert('Div clicked')">
+    <p class="p" onclick="alert('P clicked')">
+      <button onclick="handleClick(event)">Click me</button>
+    </p>
+  </div>
+
+  <h2>Explicacion:</h2>
+  <section>
+    <p>
+      Los eventos se propagan del hijo al padre, vemos que al hacer click en
+      el boton, este tiene el evento click y sus ansestros tambien entonces se ejecutan.
+    </p>
+    <p>Para detener los eventos usamos el metodo de stopPropagation().</p>
+
+    <p>
+      Cuando trabajamos con un formulario en los botones debemos usar el
+      evento submit, este eveto su comportamiento natural es de enviar el
+      formulario y de refrescar la misma, para este caso con JS solemos usar
+      el evento preventDefault() para parar el comportamiento por defecto del evento submit.
+    </p>
+  </section>
+
+  <script>
+    const handleClick = (e) => {
+      alert("Button clicked");
+      e.stopPropagation();
+    };
+  </script>
+</body>
+</html>

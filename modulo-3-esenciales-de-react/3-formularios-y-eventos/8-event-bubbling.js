@@ -12,7 +12,7 @@ Puede llegar el caso que deseemos detener la propagacion.
 
 <div>
   <p>
-    <button onClick= {hola}>Cllick</button>
+    <button onClick= {hola()}>Click</button>
   </p>
 </div>
 
@@ -29,7 +29,7 @@ const handleClick = function(){
 
 <div onClick="alert('Div clicked')">
   <p onClick="alert('P clicked')">
-    <button onClick="handleClick">Click me</button>
+    <button onClick="handleClick()">Click me</button>
   </p>
 </div>
 
@@ -50,9 +50,9 @@ const handleClick3 = function(){
 
 
 <div onClick="alert('Div clicked')">
-    <button onClick="handleClick1">Click me1</button>
-    <button onClick="handleClick2">Click me2</button>
-    <button onClick="handleClick3">Click me3</button>
+    <button onClick="handleClick1()">Click me1</button>
+    <button onClick="handleClick2()">Click me2</button>
+    <button onClick="handleClick3()">Click me3</button>
 </div>
 
 Los eventos se pueden detener con el metodo stopPropagation().
