@@ -1,6 +1,6 @@
 /*
 
-Los Hooks: Lo que hemos visto de useStare eso es un hook.
+Los Hooks: Lo que hemos visto de useState eso es un hook.
 
 Los hooks son como funciones que normalmente comienzan con la palabra 'use'.
 
