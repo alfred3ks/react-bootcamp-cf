@@ -7,6 +7,6 @@ Aqui tenemos que ver que podemos reuzar logica de programacion, tenemos dos cont
 useCount()
 
 Vamos a crear una nueva carpeta llamada hooks.
-
+Una cosa que debemos probar es cambiar nuestro custom hooks en vez de ser un objeto {} lo hacemos con un arreglo [], asi no tenemos que usar las mismas variables, podemos usar las nuestras, como vemos que se hace con useState().
 
 */
