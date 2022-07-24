@@ -1,0 +1,8 @@
+/*
+
+Vamos a ver la segunda practica usando fetch.
+En este ejemplo veremos como usar el metodo post. Para este caso tenemos un formulario.
+
+Usando igual jsonplaceholder la cual nos permite tambien hacer metodos post.
+
+*/
