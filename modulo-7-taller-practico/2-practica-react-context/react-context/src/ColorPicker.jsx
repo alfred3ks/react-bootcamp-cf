@@ -4,10 +4,18 @@ import { useContext } from 'react';
 
 const ColorPicker = () => {
 
-  let color = useContext(ThemeContext)
+  let [color, setColor] = useContext(ThemeContext);
 
   return (
-    <p>El color: {color.color} </p>
+    <div>
+      <input
+        type="color"
+        onChange={(e) => {
+          setColor(e.target.value)
+        }} />
+      <p>El color: {color} </p>
+      <div value={color}></div>
+    </div>
   );
 }
 

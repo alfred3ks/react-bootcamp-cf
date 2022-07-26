@@ -37,4 +37,6 @@ A ese contexto le pasamos unas props que los componentes dentro podran acceder: 
 
 El valor que recibe value puede ser un objeto, una variable, etc. Para el caso un objeto.
 
+Ahora vamos a ver como modificar el valor del contexto para eso me he creado un componente nuevo AppModValorContext.jsx
+
 */
