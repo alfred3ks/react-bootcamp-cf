@@ -5,6 +5,8 @@ import Container from '../elements/Container';
 import Row from '../elements/Row';
 import devto from '../mocks/devto'
 
+// Estos articulos vienen del mocks:
+
 const Articles = ({ className }) => {
   console.log(devto);
   return (

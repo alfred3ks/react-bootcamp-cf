@@ -1,17 +1,19 @@
 import React from 'react';
-import Articles from './containers/Articles';
-import ArticlesContext from './containers/ArticlesContext';
-import Header from './containers/Header';
-import { UserProvider } from './contexts/UserContext';
+// import Articles from './containers/Articles';
+import ArticlesAPIFetch from './containers/ArticlesAPIFetch';
+// import ArticlesContext from './containers/ArticlesContext';
+// import Header from './containers/Header';
+import HeaderFetch from './containers/HeaderFetch';
+// import { UserProvider } from './contexts/UserContext';
+import { UserProvider } from './contexts/UserContextFetch';
 
 function App() {
   return (
     <div>
-      {/*Metemos todos los componentes dentro de userContentext */}
+      {/* Metemos todos los componentes dentro de userContentext */}
       <UserProvider>
-        <Header />
-        <Articles />
-        <ArticlesContext />
+        <HeaderFetch />
+        <ArticlesAPIFetch />
       </UserProvider>
     </div>
   );

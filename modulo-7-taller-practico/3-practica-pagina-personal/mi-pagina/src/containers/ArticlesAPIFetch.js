@@ -1,23 +1,26 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components';
 import Article from '../blocks/Article';
-import { UserContext } from '../contexts/UserContext';
+// import { UserContext } from '../contexts/UserContext';
 import Container from '../elements/Container';
 import Row from '../elements/Row';
-// import devto from '../mocks/devto'
+import { UserContextFetch } from '../contexts/UserContextFetch';
+import DevChanger from '../blocks/DevChanger';
 
-const ArticlesContext = ({ className }) => {
-  // console.log(devto);
+// Estos articulos viene de hacer fetch a la API
+const ArticlesAPIFetch = ({ className }) => {
 
-  let articlesFromDevTo = useContext(UserContext);
-  console.log(articlesFromDevTo);
+  let [user] = useContext(UserContextFetch);
+  console.log(user.articlesFromDevTo);
   return (
     <div className={className}>
       <Container>
         <h2>Estos son mis articulos en Dev.to:</h2>
+        <p>{user.devToUsername}</p>
+        <DevChanger />
         <Row>
           {
-            articlesFromDevTo.map((article) => {
+            user.articlesFromDevTo.map((article) => {
               return (
                 <Article article={article} key={article.id} />
               )
@@ -29,7 +32,7 @@ const ArticlesContext = ({ className }) => {
   )
 }
 
-export default styled(ArticlesContext)`
+export default styled(ArticlesAPIFetch)`
 
   background-color: ${(props) => {
     return props?.theme?.colors?.background || "#14213d"

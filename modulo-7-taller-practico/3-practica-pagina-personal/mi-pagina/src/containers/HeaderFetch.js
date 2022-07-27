@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { LinkPrimaryButton, LinkSecondaryButton } from '../collections/Buttons';
 import { titleStyles } from '../collections/Styles';
-import { UserContext } from '../contexts/UserContext';
+import { UserContextFetch } from '../contexts/UserContextFetch';
 import CircleImage from '../elements/CircleImage';
 import Container from '../elements/Container';
 import Row from '../elements/Row';
@@ -19,12 +19,12 @@ const InfoContainer = styled.div`
   gap: 2rem;
   `
 
-const Header = ({ className }) => {
+const HeaderFetch = ({ className }) => {
 
   /*
-  Al tener los articulos en constext los podriamos traer aqui: Compartivos con diferentes componentes la informacion.
+  Al tener los articulos en context los podriamos traer aqui: Compartivos con diferentes componentes la informacion.
   */
-  let articlesFromDevToMocks = useContext(UserContext);
+  let [user] = useContext(UserContextFetch);
 
   return (
     <Container>
@@ -40,7 +40,7 @@ const Header = ({ className }) => {
           </Row>
 
           {/* Asi obtenemos valores que estan en context */}
-          <LinkSecondaryButton>Lee mis Artículos ({articlesFromDevToMocks.length})</LinkSecondaryButton>
+          <LinkSecondaryButton>Lee mis Artículos ({user.articlesFromDevTo.length})</LinkSecondaryButton>
 
         </InfoContainer>
         <CircleImage src="/imgs/avatar.png" alt="Avatar de Alfredo Sánchez" />
@@ -50,7 +50,7 @@ const Header = ({ className }) => {
 }
 
 /* Aqui vemos otra forma de implementar styled components */
-export default styled(Header)`
+export default styled(HeaderFetch)`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
